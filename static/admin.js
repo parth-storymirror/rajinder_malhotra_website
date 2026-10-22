@@ -33,7 +33,7 @@ $("v-add").onclick = async () => {
 
 $("b-add").onclick = async () => {
   const links = $("b-links").value.split("\n").map(l => l.split("|").map(s => s.trim())).filter(p => p[1]).map(([label, url]) => ({ label, url }));
-  const book = { title: $("b-title").value.trim(), hindiTitle: $("b-hindi").value.trim(), subtitle: $("b-sub").value.trim(), cover: $("b-cover").value.trim(), description: $("b-desc").value.trim(), publisher: $("b-pub").value.trim(), isbn: $("b-isbn").value.trim(), price: $("b-price").value.trim(), links };
+  const book = { title: $("b-title").value.trim(), hindiTitle: $("b-hindi").value.trim(), subtitle: $("b-sub").value.trim(), cover: $("b-cover").value.trim(), description: $("b-desc").value.trim(), publisher: $("b-pub").value.trim(), isbn: $("b-isbn").value.trim(), links };
   if (!book.title) return say("Title is required.");
   try { await Store.add("books", book); document.querySelectorAll("#panel input,#panel textarea").forEach(e => e.value = ""); say("Book added."); refresh(); } catch (e) { say(e.message); }
 };

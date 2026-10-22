@@ -16,8 +16,8 @@ function render({ books, videos }) {
         <h3>${esc(b.title)}</h3>
         <div class="eyebrow">${esc(b.subtitle)}</div>
         <p class="desc">${esc(b.description)}</p>
-        ${[["Publisher", b.publisher], ["ISBN", b.isbn], ["Price", b.price]].filter(x => x[1]).length
-          ? `<dl class="meta">${[["Publisher", b.publisher], ["ISBN", b.isbn], ["Price", b.price]].filter(x => x[1]).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : ""}
+        ${[["Publisher", b.publisher], ["ISBN", b.isbn]].filter(x => x[1]).length
+          ? `<dl class="meta">${[["Publisher", b.publisher], ["ISBN", b.isbn]].filter(x => x[1]).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : ""}
         ${(b.images || []).length ? `<div class="thumbs">${b.images.map(i => `<img src="${esc(i)}" alt="${esc(b.title)} back cover" loading="lazy">`).join("")}</div>` : ""}
         ${(b.links || []).length
           ? `<div class="buy"><div class="eyebrow">Available now on</div><div class="links">${b.links.map(l => `<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener"><small>Buy on</small><strong>${esc(l.label)}</strong></a>`).join("")}</div></div>`
