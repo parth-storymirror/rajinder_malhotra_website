@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin | RAHIL</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/">← RAHIL</a><span class="eyebrow">Admin</span></div></nav>
+<main class="admin wrap">
+
+  <div class="card" id="login">
+    <h3>Sign in</h3>
+    <label>Password</label><input type="password" id="pw">
+    <p style="margin-top:14px"><button class="btn" id="login-btn">Sign in</button></p>
+    <div class="msg" id="login-msg">Demo password: rahil123</div>
+  </div>
+
+  <div id="panel" hidden>
+    <div class="card">
+      <h3>Add YouTube video</h3>
+      <label>Title</label><input id="v-title">
+      <label>YouTube link</label><input id="v-url" placeholder="https://www.youtube.com/watch?v=...">
+      <p style="margin-top:14px"><button class="btn" id="v-add">Add video</button></p>
+      <div id="v-list" style="margin-top:16px"></div>
+    </div>
+
+    <div class="card">
+      <h3>Add book</h3>
+      <label>Title</label><input id="b-title">
+      <label>Hindi title (optional)</label><input id="b-hindi">
+      <label>Subtitle</label><input id="b-sub" placeholder="Poems · Translated by ...">
+      <label>Cover image path or URL</label><input id="b-cover" placeholder="img/my-book.jpg">
+      <label>Description</label><textarea id="b-desc"></textarea>
+      <label>Publisher</label><input id="b-pub">
+      <label>ISBN</label><input id="b-isbn">
+      <label>Price</label><input id="b-price" placeholder="₹899">
+      <label>Buy links — one per line as: Label | URL</label>
+      <textarea id="b-links" placeholder="Amazon | https://..."></textarea>
+      <p style="margin-top:14px"><button class="btn" id="b-add">Add book</button></p>
+      <div id="b-list" style="margin-top:16px"></div>
+    </div>
+    <div class="msg" id="msg"></div>
+  </div>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
