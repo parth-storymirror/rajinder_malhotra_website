@@ -108,7 +108,6 @@ textarea{min-height:90px}
   .about-side,.cover{margin:0 auto;width:100%;max-width:280px}
   section{padding:56px 0}
   .book{margin-bottom:56px}
-  .logo .latin{display:none}
 }
 @media(max-width:600px){
   body{font-size:1.22rem;line-height:1.65}
