@@ -1,1 +1,3 @@
-{"version":"0.0.1","configurations":[{"name":"site","runtimeExecutable":"python","runtimeArgs":["server.py"],"port":8000}]}
+{"version":"0.0.1","configurations":[
+{"name":"site","runtimeExecutable":"python","runtimeArgs":["server.py"],"port":8000},
+{"name":"static","runtimeExecutable":"python","runtimeArgs":["-m","http.server","8100","--directory","static"],"port":8100}]}

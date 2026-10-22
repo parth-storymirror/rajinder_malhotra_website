@@ -51,5 +51,5 @@ document.addEventListener("click", e => {
 document.addEventListener("keydown", e => { if (e.key === "Escape") lb.hidden = true; });
 
 document.getElementById("yr").textContent = new Date().getFullYear();
-fetch("/api/data").then(r => r.json()).then(render);
+Store.load().then(render);
 

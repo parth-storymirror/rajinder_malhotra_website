@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).parent
 STATIC = ROOT / "static"
-DATA = ROOT / "data.json"
+DATA = STATIC / "data.json"
 PORT = int(os.environ.get("PORT", 8000))
 PASSWORD = os.environ.get("ADMIN_PASSWORD", "rahil123")
 TOKENS = set()
